@@ -14,5 +14,8 @@ public class Climber : MonoBehaviour
 
         transform.position += Vector3.up * climbStep;
         lastClimbTime = Time.time;
+        Vector3 newScale = transform.localScale;
+        newScale.x *= -1; // Flip the character horizontally
+        transform.localScale = newScale;
     }
 }
